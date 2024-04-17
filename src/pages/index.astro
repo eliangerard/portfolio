@@ -9,21 +9,21 @@ import lin from "../images/linkedin.svg";
 
 <Layout title="Elian Gerard">
 	<main
-		class="relative z-30 min-h-screen flex flex-col items-center min-w-full"
+		class="relative z-30 min-h-screen flex flex-col items-center min-w-full p-6 md:p-0"
 	>
 		<div class="flex flex-col items-center max-w-screen-md">
 			<div class="h-screen flex items-center">
-				<div>
-					<p class="font-[MuseoModerno] font-bold text-5xl">
+				<div class="px-12 md:p-0">
+					<p class="font-[MuseoModerno] font-bold text-2xl md:text-5xl">
 						Hi! I'm
 					</p>
 					<h1
-						class="font-bold font-[Montserrat] text-8xl text-left -ml-[5px]"
+						class="font-extrabold font-[Montserrat] text-7xl md:text-8xl text-left -ml-[5px]"
 					>
 						Elian Gerard
 					</h1>
-					<span class="flex justify-between items-center">
-						<p class="text-4xl opacity-50 font-semibold">
+					<span class="flex flex-col md:flex-row items-left justify-between md:items-center">
+						<p class="text-xl mb-2 md:mb-0 md:text-4xl opacity-50 font-semibold">
 							Fullstack Developer
 						</p>
 						<div class="flex items-center">
@@ -106,7 +106,7 @@ import lin from "../images/linkedin.svg";
 					Projects
 				</h2>
 
-				<ul class="flex flex-wrap">
+				<ul class="flex flex-col md:flex-row md:flex-wrap">
 					<Project
 						title="Por amor a Tobby"
 						description="A web app for animal shelters in Baja California. It showcases animals available for adoption with detailed profiles and photos. The project will be showcased at the RE: Border conference, highlighting its impact on animal welfare and community engagement."
