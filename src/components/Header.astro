@@ -1,0 +1,35 @@
+---
+import icon from "../images/egicono.svg";
+---
+
+<header id="header" class="flex fixed top-0 left-0 w-full justify-between p-10 h-16 items-center text-2xl bg-transparent z-50 transition-all">
+    <a href="#top">
+        <img src={icon.src}  alt="icon" class="w-14 h-14">
+    </a>
+    <nav>
+        <ul class="flex">
+            <a class="ml-28" href="#about">About</a>
+            <a class="ml-28" href="#experience">Experience</a>
+            <a class="ml-28" href="#skills">Skills</a>
+            <a class="ml-28" href="#projects">Projects</a>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        if (window.pageYOffset > 100) {
+            header.classList.add('bg-[#00000016]');
+        } else {
+            header.classList.remove('bg-[#00000016]');
+        }
+    });
+</script>
+
+<style>
+    a {
+        font-family: "MuseoModerno", sans-serif;
+        font-weight: 600;
+    }
+</style>

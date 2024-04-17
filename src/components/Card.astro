@@ -1,0 +1,30 @@
+---
+import Dot from "../images/dot.svg";
+
+interface Props {
+	title: string;
+	subtitle: string;
+	body: string;
+	date: string;
+}
+
+const { title, subtitle, body, date } = Astro.props;
+---
+
+<li class="group flex items-start mb-4">
+	<img src={Dot.src} class="w-5 m-3 mr-6 group-hover:rotate-[60deg] transition-all" />
+	<div>
+		<span class="flex justify-between mt-2">
+			<h3 class="font-bold text-2xl">
+				{title}
+			</h3>
+			<p class="font-bold italic">{date}</p>
+		</span>
+		<p class="text-black/50 font-semibold text-xl my-1">
+			{subtitle}
+		</p>
+		<p class="font-medium text-black/50 text-lg">
+			{body}
+		</p>
+	</div>
+</li>

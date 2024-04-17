@@ -1,0 +1,133 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Project from "../components/Project.astro";
+
+import gh from "../images/github.svg";
+import lin from "../images/linkedin.svg";
+---
+
+<Layout title="Elian Gerard">
+	<main
+		class="relative z-30 min-h-screen flex flex-col items-center min-w-full"
+	>
+		<div class="flex flex-col items-center max-w-screen-md">
+			<div class="h-screen flex items-center">
+				<div>
+					<p class="font-[MuseoModerno] font-bold text-5xl">
+						Hi! I'm
+					</p>
+					<h1
+						class="font-bold font-[Montserrat] text-8xl text-left -ml-[5px]"
+					>
+						Elian Gerard
+					</h1>
+					<span class="flex justify-between items-center">
+						<p class="text-4xl opacity-50 font-semibold">
+							Fullstack Developer
+						</p>
+						<div class="flex items-center">
+							<a
+								href="https://github.com/eliangerard/"
+								target="_blank"
+								class="h-full w-12 p-2 bg-black/[0.06] rounded-lg font-bold text-black/50"
+							>
+								<img src={gh.src} alt="github" />
+							</a>
+							<a
+								href="https://www.linkedin.com/in/eliangerard/"
+								target="_blank"
+								class="h-full w-12 p-2 ml-2 bg-black/[0.06] rounded-lg font-bold text-black/50"
+							>
+								<img src={lin.src} alt="linkedin" />
+							</a>
+						</div>
+					</span>
+				</div>
+			</div>
+			<div id="about" class="pt-32">
+				<h2 class="font-bold text-3xl font-[MuseoModerno]">About</h2>
+				<p class="font-medium text-black/50 text-lg">
+					Meticulous developer and engineering student with a profound
+					passion for every facet of software development,
+					specializing in frontend technologies. Fueled by a
+					relentless drive for self-improvement, I am committed to
+					delivering high-quality solutions that exceed expectations.
+				</p>
+			</div>
+			<div id="experience" class="pt-32">
+				<h2 class="font-bold text-3xl font-[MuseoModerno] my-4">
+					Experience
+				</h2>
+
+				<ul>
+					<Card
+						title="Fullstack Developer"
+						subtitle="Freelance"
+						date="2023 - Present"
+						body="As a freelance Fullstack Developer, I've had the opportunity to work on diverse projects, crafting comprehensive information systems tailored to client needs. One notable project was for TintoTenis, where I developed a web application to streamline their order management process. Additionally, I contributed to Por Amor a Tobby, a web app aimed at aiding animal shelters in Baja California by showcasing animals available for adoption. Alongside these, I've completed various smaller projects, honing my skills and delivering solutions that meet client expectations."
+					/>
+					<Card
+						title="Programming Tutor"
+						subtitle="SuperProf"
+						date="2023 - Present"
+						body="I've been providing private programming lessons via the SuperProf platform. Through this avenue, I've not only connected with potential clients but also fostered ongoing relationships. I've taught numerous students, maintaining a steady group of learners whom I continue to support. My lessons focus on web programming technologies and their foundational principles."
+					/>
+				</ul>
+			</div>
+			<div id="skills" class="pt-32">
+				<h2 class="font-bold text-3xl font-[MuseoModerno] my-4">
+					Skills
+				</h2>
+
+				<ul>
+					<Card
+						title="Computer Systems Engineer"
+						subtitle="Tecnológico Nacional de México Campus Chihuahua II"
+						date="2020 - Currently"
+						body="Focusing on technologies such as Java, Node.js, HTML, CSS, and JavaScript, as well as proficiency in MySQL and MongoDB for database management, deployment experience with cloud platforms like AWS, alongside network administration. Actively involved in competitions and community engagement initiatives in the city."
+					/>
+					<Card
+						title="React (Hooks & MERN)"
+						subtitle="Udemy - Fernando Herrera"
+						date="Certification"
+						body="Learning about Hooks, Redux, Router and Testing, fullstack integration, and more."
+					/>
+					<Card
+						title="Node.js - Zero to Expert"
+						subtitle="Udemy - Fernando Herrera"
+						date="Certification"
+						body="Learning about Sockets, APIs, Authentication, Deployment, MongoDB, and more."
+					/>
+				</ul>
+			</div>
+			<div id="projects" class="pt-32 w-full pb-32">
+				<h2 class="font-bold text-3xl font-[MuseoModerno] my-4">
+					Projects
+				</h2>
+
+				<ul class="flex flex-wrap">
+					<Project
+						title="Por amor a Tobby"
+						description="A web app for animal shelters in Baja California. It showcases animals available for adoption with detailed profiles and photos. The project will be showcased at the RE: Border conference, highlighting its impact on animal welfare and community engagement."
+						image="/pat.png"
+					/>
+					<Project
+						title="TintoTenis App"
+						description="For this project, I teamed up with UI/UX designer Alex Arreola to revamp their order management system. I took care of development, server setup, domain configuration, and the entire deployment process, providing TintoTenis with a complete web solution."
+						image="/tt.jpeg"
+					/>
+					<Project
+						title="NavegaTec"
+						description="NavegaTec is a web application designed to serve as a map of our university campus, providing students with information about upcoming events and their locations. Collaborating with UI/UX designer Alex, we developed this tool as part of our community service initiative during our time at the university."
+						image="/nt.png"
+					/>
+					<Project
+						title="simple-tts-mp3"
+						description="A Node.js package that encapsulates the functionality of the google-tts-api package, enabling quick and free text-to-speech conversion. With thousands of downloads, this package has gained popularity for its efficiency and ease of use."
+					/>
+				</ul>
+			</div>
+		</div>
+	</main>
+</Layout>
