@@ -14,7 +14,9 @@ import lin from "../images/linkedin.svg";
 		<div class="flex flex-col items-center max-w-screen-md">
 			<div class="h-screen flex items-center">
 				<div class="px-12 md:p-0">
-					<p class="font-[MuseoModerno] font-bold text-2xl md:text-5xl">
+					<p
+						class="font-[MuseoModerno] font-bold text-2xl md:text-5xl"
+					>
 						Hi! I'm
 					</p>
 					<h1
@@ -22,24 +24,36 @@ import lin from "../images/linkedin.svg";
 					>
 						Elian Gerard
 					</h1>
-					<span class="flex flex-col md:flex-row items-left justify-between md:items-center">
-						<p class="text-xl mb-2 md:mb-0 md:text-4xl opacity-50 font-semibold">
+					<span
+						class="flex flex-col md:flex-row items-left justify-between md:items-center"
+					>
+						<p
+							class="text-xl mb-2 md:mb-0 md:text-4xl opacity-50 font-semibold"
+						>
 							Fullstack Developer
 						</p>
 						<div class="flex items-center">
 							<a
 								href="https://github.com/eliangerard/"
 								target="_blank"
-								class="h-full w-12 p-2 bg-black/[0.06] rounded-lg font-bold text-black/50"
+								class="h-full w-12 p-2 bg-black/[0.06] hover:bg-white/[0.4] rounded-lg font-bold text-black/50 transition-all"
 							>
-								<img src={gh.src} alt="github" />
+								<img
+									class="h-8 w-8"
+									src={gh.src}
+									alt="github"
+								/>
 							</a>
 							<a
 								href="https://www.linkedin.com/in/eliangerard/"
 								target="_blank"
-								class="h-full w-12 p-2 ml-2 bg-black/[0.06] rounded-lg font-bold text-black/50"
+								class="h-full w-12 p-2 ml-2 bg-black/[0.06] hover:bg-white/[0.4] rounded-lg font-bold text-black/50 transition-all"
 							>
-								<img src={lin.src} alt="linkedin" />
+								<img
+									class="h-8 w-8"
+									src={lin.src}
+									alt="linkedin"
+								/>
 							</a>
 						</div>
 					</span>
@@ -72,6 +86,7 @@ import lin from "../images/linkedin.svg";
 						subtitle="SuperProf"
 						date="2023 - Present"
 						body="I've been providing private programming lessons via the SuperProf platform. Through this avenue, I've not only connected with potential clients but also fostered ongoing relationships. I've taught numerous students, maintaining a steady group of learners whom I continue to support. My lessons focus on web programming technologies and their foundational principles."
+						link="https://www.superprof.mx/estudiante-ingenieria-ofrece-clases-programacion-html-css-node-react.html"
 					/>
 				</ul>
 			</div>
@@ -86,18 +101,21 @@ import lin from "../images/linkedin.svg";
 						subtitle="Tecnológico Nacional de México Campus Chihuahua II"
 						date="2020 - Currently"
 						body="Focusing on technologies such as Java, Node.js, HTML, CSS, and JavaScript, as well as proficiency in MySQL and MongoDB for database management, deployment experience with cloud platforms like AWS, alongside network administration. Actively involved in competitions and community engagement initiatives in the city."
+						link="/Reticula-ISC-2023.webp"
 					/>
 					<Card
 						title="React (Hooks & MERN)"
 						subtitle="Udemy - Fernando Herrera"
 						date="Certification"
 						body="Learning about Hooks, Redux, Router and Testing, fullstack integration, and more."
+						link="https://udemy-certificate.s3.amazonaws.com/pdf/UC-016de529-146c-4e5e-aa3a-7b5924591833.pdf"
 					/>
 					<Card
 						title="Node.js - Zero to Expert"
 						subtitle="Udemy - Fernando Herrera"
 						date="Certification"
 						body="Learning about Sockets, APIs, Authentication, Deployment, MongoDB, and more."
+						link="https://udemy-certificate.s3.amazonaws.com/pdf/UC-c2bbdd5b-64cb-482b-9368-3bdc3cbca820.pdf"
 					/>
 				</ul>
 			</div>
@@ -110,21 +128,24 @@ import lin from "../images/linkedin.svg";
 					<Project
 						title="Por amor a Tobby"
 						description="A web app for animal shelters in Baja California. It showcases animals available for adoption with detailed profiles and photos. The project will be showcased at the RE: Border conference, highlighting its impact on animal welfare and community engagement."
-						image="/pat.png"
+						image="/pat.webp"
+						link="https://poramoratobby.com/"
 					/>
 					<Project
 						title="TintoTenis App"
 						description="For this project, I teamed up with UI/UX designer Alex Arreola to revamp their order management system. I took care of development, server setup, domain configuration, and the entire deployment process, providing TintoTenis with a complete web solution."
-						image="/tt.jpeg"
+						image="/tt.webp"
 					/>
 					<Project
 						title="NavegaTec"
 						description="NavegaTec is a web application designed to serve as a map of our university campus, providing students with information about upcoming events and their locations. Collaborating with UI/UX designer Alex, we developed this tool as part of our community service initiative during our time at the university."
-						image="/nt.png"
+						image="/nt.webp"
+						link="https://navegatest.vercel.app/"
 					/>
 					<Project
 						title="simple-tts-mp3"
 						description="A Node.js package that encapsulates the functionality of the google-tts-api package, enabling quick and free text-to-speech conversion. With thousands of downloads, this package has gained popularity for its efficiency and ease of use."
+						link="https://www.npmjs.com/package/simple-tts-mp3"
 					/>
 				</ul>
 			</div>

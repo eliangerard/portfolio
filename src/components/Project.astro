@@ -1,32 +1,46 @@
 ---
+import Link from "../ui/icons/Link.astro";
+
 interface Props {
     title: string;
     description: string;
     image?: string;
     left?: boolean;
+    link?: string;
 }
 
-const { title, description, left = true, image } = Astro.props;
+const { title, description, left = true, image, link } = Astro.props;
 ---
 
 <li
-    class={`bg-black/0 hover:bg-black/[0.06] rounded-3xl mb-2 p-5 flex flex-col w-full md:w-1/2 transition-all`}
+    class={`bg-black/0 hover:bg-white/[0.4] rounded-3xl mb-2 p-5 flex flex-col w-full md:w-1/2 transition-all`}
 >
     {
         image ? (
             <img
                 class="w-full h-[300px] object-cover rounded-xl"
                 src={image}
-                alt=""
+                alt={title}
             />
         ) : (
-            <p class="w-full h-[300px] flex items-center justify-center font-bold text-3xl bg-white/25 text-black/50 rounded-xl">{title}</p>
+            <p class="w-full h-[300px] flex items-center justify-center font-bold text-3xl bg-white/25 text-black/50 rounded-xl">
+                {title}
+            </p>
         )
     }
 
     <div class="mt-2">
-        <h3 class="font-semibold text-2xl my-1">{title}</h3>
-        <p class="font-medium text-black/50 text-lg text-pretty">
+        <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-2xl my-1">{title}</h3>
+            {
+                link && (
+                    <a href={link} target="_blank">
+                        <Link />
+                    </a>
+                )
+            }
+        </div>
+        <p class="font-medium text-black/75 text-lg text-pretty">
             {description}
         </p>
     </div>

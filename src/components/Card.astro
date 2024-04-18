@@ -1,29 +1,44 @@
 ---
 import Dot from "../images/dot.svg";
+import Link from "../ui/icons/Link.astro";
 
 interface Props {
 	title: string;
 	subtitle: string;
 	body: string;
 	date: string;
+	link?: string;
 }
 
-const { title, subtitle, body, date } = Astro.props;
+const { title, subtitle, body, date, link } = Astro.props;
 ---
 
 <li class="group flex items-start mb-4">
-	<img src={Dot.src} class="w-5 m-3 mr-6 group-hover:rotate-[60deg] transition-all" />
+	<img
+		src={Dot.src}
+		class="w-5 h-7 m-3 mr-6 group-hover:rotate-[60deg] transition-all"
+		alt={title}
+	/>
 	<div>
 		<span class="flex flex-col md:flex-row justify-between mt-2">
 			<h3 class="font-bold text-2xl">
 				{title}
 			</h3>
-			<p class="font-bold italic">{date}</p>
+			<div class="flex items-center">
+				<p class="font-bold italic">{date}</p>
+				{
+					link && (
+						<a href={link} target="_blank">
+							<Link/>
+						</a>
+					)
+				}
+			</div>
 		</span>
-		<p class="text-black/50 font-semibold text-xl my-1">
+		<p class="text-black/85 font-semibold text-xl my-1">
 			{subtitle}
 		</p>
-		<p class="font-medium text-black/50 text-lg">
+		<p class="font-medium text-black/75 text-lg">
 			{body}
 		</p>
 	</div>
