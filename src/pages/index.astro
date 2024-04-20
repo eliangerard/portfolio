@@ -3,8 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Project from "../components/Project.astro";
 
-import gh from "../images/github.svg";
-import lin from "../images/linkedin.svg";
+import github from "../images/github.svg";
+import linkedin from "../images/linkedin.svg";
+import mail from "../images/mail.svg";
+import { data } from "../data";
 ---
 
 <Layout title="Elian Gerard">
@@ -20,9 +22,9 @@ import lin from "../images/linkedin.svg";
 						Hi! I'm
 					</p>
 					<h1
-						class="font-extrabold font-[Montserrat] text-7xl md:text-8xl text-left -ml-[5px]"
+						class="font-bold font-[Montserrat] text-7xl md:text-8xl text-left -ml-[5px]"
 					>
-						Elian Gerard
+						{data.me.name}
 					</h1>
 					<span
 						class="flex flex-col md:flex-row items-left justify-between md:items-center"
@@ -30,28 +32,39 @@ import lin from "../images/linkedin.svg";
 						<p
 							class="text-xl mb-2 md:mb-0 md:text-4xl opacity-50 font-semibold"
 						>
-							Fullstack Developer
+							{data.me.title}
 						</p>
 						<div class="flex items-center">
 							<a
 								href="https://github.com/eliangerard/"
 								target="_blank"
-								class="h-full w-12 p-2 bg-black/[0.06] hover:bg-white/[0.4] rounded-lg font-bold text-black/50 transition-all"
+								class="h-full w-12 p-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
 							>
 								<img
 									class="h-8 w-8"
-									src={gh.src}
+									src={github.src}
 									alt="github"
 								/>
 							</a>
 							<a
 								href="https://www.linkedin.com/in/eliangerard/"
 								target="_blank"
-								class="h-full w-12 p-2 ml-2 bg-black/[0.06] hover:bg-white/[0.4] rounded-lg font-bold text-black/50 transition-all"
+								class="h-full w-12 p-2 ml-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
 							>
 								<img
 									class="h-8 w-8"
-									src={lin.src}
+									src={linkedin.src}
+									alt="linkedin"
+								/>
+							</a>
+							<a
+								href="mailto:eliangerardiso@gmail.com"
+								target="_blank"
+								class="h-full w-12 p-2 ml-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
+							>
+								<img
+									class="h-8 w-8"
+									src={mail.src}
 									alt="linkedin"
 								/>
 							</a>
@@ -61,12 +74,8 @@ import lin from "../images/linkedin.svg";
 			</div>
 			<div id="about" class="pt-32">
 				<h2 class="font-bold text-3xl font-[MuseoModerno]">About</h2>
-				<p class="font-medium text-black/50 text-lg">
-					Meticulous developer and engineering student with a profound
-					passion for every facet of software development,
-					specializing in frontend technologies. Fueled by a
-					relentless drive for self-improvement, I am committed to
-					delivering high-quality solutions that exceed expectations.
+				<p class="font-light opacity-75 text-lg text-pretty">
+					{data.me.about}
 				</p>
 			</div>
 			<div id="experience" class="pt-32">
@@ -75,19 +84,17 @@ import lin from "../images/linkedin.svg";
 				</h2>
 
 				<ul>
-					<Card
-						title="Fullstack Developer"
-						subtitle="Freelance"
-						date="2023 - Present"
-						body="As a freelance Fullstack Developer, I've had the opportunity to work on diverse projects, crafting comprehensive information systems tailored to client needs. One notable project was for TintoTenis, where I developed a web application to streamline their order management process. Additionally, I contributed to Por Amor a Tobby, a web app aimed at aiding animal shelters in Baja California by showcasing animals available for adoption. Alongside these, I've completed various smaller projects, honing my skills and delivering solutions that meet client expectations."
-					/>
-					<Card
-						title="Programming Tutor"
-						subtitle="SuperProf"
-						date="2023 - Present"
-						body="I've been providing private programming lessons via the SuperProf platform. Through this avenue, I've not only connected with potential clients but also fostered ongoing relationships. I've taught numerous students, maintaining a steady group of learners whom I continue to support. My lessons focus on web programming technologies and their foundational principles."
-						link="https://www.superprof.mx/estudiante-ingenieria-ofrece-clases-programacion-html-css-node-react.html"
-					/>
+					{
+						data.experience.map((experience) => (
+							<Card
+								title={experience.title}
+								subtitle={experience.subtitle}
+								date={experience.data}
+								body={experience.description}
+								link={experience.link}
+							/>
+						))
+					}
 				</ul>
 			</div>
 			<div id="skills" class="pt-32">
@@ -96,27 +103,17 @@ import lin from "../images/linkedin.svg";
 				</h2>
 
 				<ul>
-					<Card
-						title="Computer Systems Engineer"
-						subtitle="Tecnológico Nacional de México Campus Chihuahua II"
-						date="2020 - Currently"
-						body="Focusing on technologies such as Java, Node.js, HTML, CSS, and JavaScript, as well as proficiency in MySQL and MongoDB for database management, deployment experience with cloud platforms like AWS, alongside network administration. Actively involved in competitions and community engagement initiatives in the city."
-						link="/Reticula-ISC-2023.webp"
-					/>
-					<Card
-						title="React (Hooks & MERN)"
-						subtitle="Udemy - Fernando Herrera"
-						date="Certification"
-						body="Learning about Hooks, Redux, Router and Testing, fullstack integration, and more."
-						link="https://udemy-certificate.s3.amazonaws.com/pdf/UC-016de529-146c-4e5e-aa3a-7b5924591833.pdf"
-					/>
-					<Card
-						title="Node.js - Zero to Expert"
-						subtitle="Udemy - Fernando Herrera"
-						date="Certification"
-						body="Learning about Sockets, APIs, Authentication, Deployment, MongoDB, and more."
-						link="https://udemy-certificate.s3.amazonaws.com/pdf/UC-c2bbdd5b-64cb-482b-9368-3bdc3cbca820.pdf"
-					/>
+					{
+						data.skills.map((skill) => (
+							<Card
+								title={skill.title}
+								subtitle={skill.subtitle}
+								date={skill.data}
+								body={skill.description}
+								link={skill.link}
+							/>
+						))
+					}
 				</ul>
 			</div>
 			<div id="projects" class="pt-32 w-full pb-32">
@@ -124,29 +121,18 @@ import lin from "../images/linkedin.svg";
 					Projects
 				</h2>
 
-				<ul class="flex flex-col md:flex-row md:flex-wrap">
-					<Project
-						title="Por amor a Tobby"
-						description="A web app for animal shelters in Baja California. It showcases animals available for adoption with detailed profiles and photos. The project will be showcased at the RE: Border conference, highlighting its impact on animal welfare and community engagement."
-						image="/pat.webp"
-						link="https://poramoratobby.com/"
-					/>
-					<Project
-						title="TintoTenis App"
-						description="For this project, I teamed up with UI/UX designer Alex Arreola to revamp their order management system. I took care of development, server setup, domain configuration, and the entire deployment process, providing TintoTenis with a complete web solution."
-						image="/tt.webp"
-					/>
-					<Project
-						title="NavegaTec"
-						description="NavegaTec is a web application designed to serve as a map of our university campus, providing students with information about upcoming events and their locations. Collaborating with UI/UX designer Alex, we developed this tool as part of our community service initiative during our time at the university."
-						image="/nt.webp"
-						link="https://navegatest.vercel.app/"
-					/>
-					<Project
-						title="simple-tts-mp3"
-						description="A Node.js package that encapsulates the functionality of the google-tts-api package, enabling quick and free text-to-speech conversion. With thousands of downloads, this package has gained popularity for its efficiency and ease of use."
-						link="https://www.npmjs.com/package/simple-tts-mp3"
-					/>
+				<ul class="flex flex-col md:flex-row md:flex-wrap px-4">
+					
+					{
+						data.projects.map((project) => (
+							<Project
+								title={project.title}
+								description={project.description}
+								image={project.image}
+								link={project.link}
+							/>
+						))
+					}
 				</ul>
 			</div>
 		</div>

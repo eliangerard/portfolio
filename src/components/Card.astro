@@ -13,32 +13,34 @@ interface Props {
 const { title, subtitle, body, date, link } = Astro.props;
 ---
 
-<li class="group flex items-start mb-4">
+<li class="group flex items-start mb-4 w-full">
 	<img
 		src={Dot.src}
 		class="w-5 h-7 m-3 mr-6 group-hover:rotate-[60deg] transition-all"
 		alt={title}
 	/>
-	<div>
+	<div class="flex-1">
 		<span class="flex flex-col md:flex-row justify-between mt-2">
-			<h3 class="font-bold text-2xl">
+			<h3 class="font-semibold text-2xl my-1">
 				{title}
 			</h3>
 			<div class="flex items-center">
-				<p class="font-bold italic">{date}</p>
 				{
-					link && (
-						<a href={link} target="_blank">
-							<Link/>
+					link ? (
+						<a href={link} target="_blank" class="flex items-center rounded-full bg-white/0 p-1 px-4 hover:bg-white/[0.05] hover:ring-1 ring-white/20 transition-all">
+							<p class="font-semibold italic">{date}</p>
+							<Link />
 						</a>
+					) : (
+						<p class="font-semibold italic px-4">{date}</p>
 					)
 				}
 			</div>
 		</span>
-		<p class="text-black/85 font-semibold text-xl my-1">
+		<p class="opacity-85 font-medium text-xl mb-1">
 			{subtitle}
 		</p>
-		<p class="font-medium text-black/75 text-lg">
+		<p class="font-light opacity-75 text-lg mt-1">
 			{body}
 		</p>
 	</div>

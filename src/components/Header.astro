@@ -2,27 +2,29 @@
 import icon from "../images/egicono.svg";
 ---
 
-<header id="header" class="flex fixed top-0 left-0 w-full justify-between p-10 h-10 md:h-16 items-center text-2xl bg-transparent z-50 transition-all">
-    <a href="#top">
-        <img src={icon.src}  alt="icon" class="w-14 h-14">
-    </a>
-    <nav>
-        <ul class="hidden md:flex">
-            <a class="ml-28" href="#about">About</a>
-            <a class="ml-28" href="#experience">Experience</a>
-            <a class="ml-28" href="#skills">Skills</a>
-            <a class="ml-28" href="#projects">Projects</a>
-        </ul>
-    </nav>
+<header id="header" class="flex fixed top-0 left-0 w-full justify-center border-black/10 p-8 h-6 md:h-10 items-center text-xl bg-transparent z-50 transition-all">
+    <div class="w-full max-w-screen-md flex justify-between items-center">
+        <a href="#top">
+            <img src={icon.src}  alt="icon" class="w-12 h-12 fill-white">
+        </a>
+        <nav class="flex-1">
+            <ul class="hidden md:flex justify-end">
+                <a class="ml-12" href="#about">About</a>
+                <a class="ml-12" href="#experience">Experience</a>
+                <a class="ml-12" href="#skills">Skills</a>
+                <a class="ml-12" href="#projects">Projects</a>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <script>
     window.addEventListener('scroll', () => {
         const header = document.getElementById('header');
         if (window.pageYOffset > 100) {
-            header.style.backgroundColor = '#00000016';
+            header.classList.add('scrolled');
         } else {
-            header.style.backgroundColor = 'transparent';
+            header.classList.remove('scrolled');
         }
     });
 </script>
@@ -31,5 +33,12 @@ import icon from "../images/egicono.svg";
     a {
         font-family: "MuseoModerno", sans-serif;
         font-weight: 600;
+    }
+
+    .scrolled {
+        background-color: #00000000;
+        --webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid #FFFFFF33;
     }
 </style>
