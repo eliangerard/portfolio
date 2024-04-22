@@ -13,12 +13,12 @@ const { title, description, left = true, image, link } = Astro.props;
 ---
 
 <li
-    class={`bg-black/0 hover:bg-white/[0.05] hover:backdrop-blur-xl hover:ring-1 ring-white/20 rounded-xl m-2 p-4 flex flex-col min-w-1/2 w-full transition-all`}
+    class={`bg-black/0 hover:bg-white/[0.05] hover:backdrop-blur-xl hover:ring-1 ring-white/20 rounded-xl my-2 md:mx-2 p-4 flex flex-col min-w-1/2 w-full transition-all`}
 >
     {
         image ? (
             <img
-                class="w-full h-[400px] object-cover rounded-lg"
+                class="w-full h-[250px] md:h-[400px] object-cover rounded-lg"
                 src={image}
                 alt={title}
             />
