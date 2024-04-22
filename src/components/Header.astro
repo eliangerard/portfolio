@@ -23,8 +23,10 @@ import icon from "../images/egicono.svg";
         const header = document.getElementById('header');
         if (window.pageYOffset > 100) {
             header.classList.add('scrolled');
+            header.classList.add('backdrop-blur-md');
         } else {
             header.classList.remove('scrolled');
+            header.classList.remove('backdrop-blur-md');
         }
     });
 </script>
@@ -37,8 +39,6 @@ import icon from "../images/egicono.svg";
 
     .scrolled {
         background-color: #00000000;
-        --webkit-backdrop-filter: blur(8px);
-        backdrop-filter: blur(8px);
         border-bottom: 1px solid #FFFFFF33;
     }
 </style>
