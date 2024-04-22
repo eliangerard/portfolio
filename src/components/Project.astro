@@ -23,9 +23,9 @@ const { title, description, left = true, image, link } = Astro.props;
                 alt={title}
             />
         ) : (
-            <p class="w-full h-[400px] flex items-center justify-center font-bold text-3xl bg-white/25 text-black/50 rounded-xl">
-                {title}
-            </p>
+            <div class="w-full h-[400px] flex items-center justify-center font-bold text-3xl bg-white/30 rounded-xl">
+                <p class="text-black/75 ">{title}</p>
+            </div>
         )
     }
 
