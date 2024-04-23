@@ -45,26 +45,30 @@ export const data = {
     ],
     projects: [
         {
-            title: "TintoTenis",
-            description: "Developed a web application for TintoTenis, a local tennis academy. The app streamlines their order management process, allowing users to register for classes, pay for services, and view upcoming events. The app also includes an admin panel for managing user data and generating reports.",
-            image: "/tt.webp",
-        },
-        {
             title: "Por Amor a Tobby",
             description: "Contributed to Por Amor a Tobby, a web app aimed at aiding animal shelters in Baja California. The app showcases animals available for adoption, allowing users to view photos, descriptions, and adoption requirements. The app also includes an admin panel for managing animal data and user applications.",
+            technologies: ["React", "Node.js", "MySQL", "Express", "Tailwind", "Figma"],
             image: "/pat.webp",
             link: "https://poramoratobby.com/",
         },
         {
+            title: "TintoTenis",
+            description: "Developed a web application for TintoTenis, a local tennis academy. The app streamlines their order management process, allowing users to register for classes, pay for services, and view upcoming events. The app also includes an admin panel for managing user data and generating reports.",
+            technologies: ["React", "Node.js", "MySQL", "Express", "Tailwind"],
+            image: "/tt.webp",
+        },
+        {
             title: "NavegaTec",
             description: "NavegaTec is a web application designed to serve as a map of our university campus, providing students with information about upcoming events and their locations. Collaborating with UI/UX designer Alex, we developed this tool as part of our community service initiative during our time at the university.",
+            technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind", "Figma"],
             image: "/nt.webp",
             link: "https://navegatest.vercel.app/",
         },
         {
             title: "Simple TTS",
             description: "A Node.js package that encapsulates the functionality of the google-tts-api package, enabling quick and free text-to-speech conversion. With thousands of downloads, this package has gained popularity for its efficiency and ease of use.",
+            technologies: ["Node.js"],
             link: "https://www.npmjs.com/package/simple-tts-mp3",
-        }
+        },
     ],
 }

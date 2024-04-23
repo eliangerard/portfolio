@@ -7,9 +7,10 @@ interface Props {
     image?: string;
     left?: boolean;
     link?: string;
+    technologies?: Array<string>;
 }
 
-const { title, description, left = true, image, link } = Astro.props;
+const { title, description, left = true, image, link, technologies } = Astro.props;
 ---
 
 <li
@@ -31,7 +32,7 @@ const { title, description, left = true, image, link } = Astro.props;
 
     <div class="mt-2">
         <div class="flex items-center">
-            <h3 class="font-semibold text-2xl my-1">{title}</h3>
+            <h3 class="font-semibold text-2xl mt-1">{title}</h3>
             {
                 link && (
                     <a href={link} target="_blank">
@@ -40,7 +41,14 @@ const { title, description, left = true, image, link } = Astro.props;
                 )
             }
         </div>
-        <p class="font-light opacity-75 text-lg text-pretty">
+        <div class="flex flex-wrap">
+            {technologies && technologies.map(tech =>
+                <p class="border-[1px] mt-2 px-4 rounded-full border-white/20 font mr-2 hover:bg-white/10 opacity-75 text-lg select-none transition-all">
+                    {tech}
+                </p>
+            )}
+        </div>
+        <p class="font-light opacity-75 text-lg text-pretty mt-2">
             {description}
         </p>
     </div>
