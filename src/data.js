@@ -8,19 +8,34 @@ export const data = {
     experience: [
         {
             title: "Fullstack Developer",
-            subtitle: "Freelance",
-            data: "2023 - Present",
-            responsabilites: ["Designed and developed custom web applications to meet specific client needs and streamline their operations(e.g., order management system for TintoTenis).",
-                "Collaborated directly with clients and designers to understand their requirements and translate them into functional and user- friendly web solutions.",
-                "Implemented and maintained full - stack web applications, ensuring smooth operation and efficient performance."],
-            accomplishments: ["Increased TintoTenis's order processing efficiency by 70% through development of a streamlined web application.",
-                "Contributed to 'Por Amor a Tobby' web app, selected to participate in the prestigious Re: Border 2024 conference, potentially impacting animal adoption rates in Baja California.",
-                "Successfully delivered multiple freelance projects, consistently exceeding client expectations and building a strong reputation for high - quality service."]
+            subtitle: "Por amor a Tobby (Freelance Project)",
+            data: "February 2024 - April 2024",
+            responsabilites: [
+                "Collaborated closely with the client to design and develop a comprehensive web application, encompassing both user-friendly interfaces and robust functionalities.",
+            ],
+            accomplishments: [
+                "Adopted by government animal control offices in Baja California, with the potential to significantly increase adoption rates.",
+                'It will be showcased at the RE: Border 2024 conference on "Designing Oportunidades".',
+            ],
+            link: "https://poramoratobby.com/",
         },
+        {
+            title: "Fullstack Developer",
+            subtitle: "TintoTenis (Freelance Project)",
+            data: "December 2023 - April 2024",
+            responsabilites: [
+                "Collaborated with TintoTenis's UI/UX designer to bring mobile app to life.",
+                "Developed frontend, backend, and server configuration for a seamless user experience.",
+            ],
+            accomplishments: [
+                "Increased TintoTenis's order processing efficiency by 70% through development of a streamlined web application.",
+            ]
+        },
+
         {
             title: "Programming Tutor",
             subtitle: "SuperProf",
-            data: "2023 - Present",
+            data: "October 2023 - Present",
             responsabilites: ["Provided one-on-one instruction in web development fundamentals and specific technologies.",
                 "Mentored students by troubleshooting code, answering questions, and fostering a supportive learning environment.",
                 "Cultivated long-term student relationships through ongoing tutoring sessions."],
@@ -33,7 +48,7 @@ export const data = {
         {
             title: "Computer Systems Engineer",
             subtitle: "Tecnológico Nacional de México Campus Chihuahua II",
-            data: "2020 - Present",
+            data: "January 2020 - Present",
             description: "Focusing on technologies such as Java, Node.js, HTML, CSS, and JavaScript, as well as proficiency in MySQL and MongoDB for database management, deployment experience with cloud platforms like AWS, alongside network administration. Actively involved in competitions and community engagement initiatives in the city.",
             link: "/Reticula-ISC-2023.webp",
         },
@@ -74,10 +89,18 @@ export const data = {
             link: "https://navegatest.vercel.app/",
         },
         {
-            title: "Simple TTS",
+            title: "SimpleTTS",
             description: "A Node.js package that encapsulates the functionality of the google-tts-api package, enabling quick and free text-to-speech conversion. I made this project to generate easily tts in mp3 for my Discord Bots and I thought it was a good idea to share it, now it has hundreds of downloads.",
             technologies: ["Node.js"],
+            image: "/stts.png",
             link: "https://www.npmjs.com/package/simple-tts-mp3",
         },
+        {
+            title: "Minemadness",
+            description: "A mobile game based in the traiditional game Minesweeper, but with a twist, scoring points and getting powerups before the time runs out. This game was made with Unity and C# and it's available on Google Play Store and Huawei AppGallery.",
+            technologies: ["Unity", "C#"],
+            image: "/mm.webp",
+            link: "https://play.google.com/store/apps/details?id=com.GAMEMZ.Minemadness"
+        }
     ],
 }
