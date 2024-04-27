@@ -32,13 +32,13 @@ const { title, description, left = true, image, link, technologies } = Astro.pro
 
     <div class="mt-2">
         <div class="flex items-center">
-            <h3 class="font-semibold text-2xl mt-1">{title}</h3>
             {
-                link && (
-                    <a href={link} target="_blank">
+                link ? (
+                    <a href={link} target="_blank" class="flex items-center font-semibold text-2xl mt-1 underline">
+                        {title}
                         <Link />
                     </a>
-                )
+                ) : (<h3 class="font-semibold text-2xl mt-1">{title}</h3>)
             }
         </div>
         <div class="overflow-x-auto md:overflow-x-visible">
