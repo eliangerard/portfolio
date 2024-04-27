@@ -23,10 +23,23 @@ import { data } from "../data";
 							Hi! I'm
 						</p>
 					</div>
-					<div class="group right-1/3 md:right-1/2 top-1/2 w-fit absolute translate-x-1/2 -translate-y-1/2 -z-10">
-						<p class="group-hover:opacity-100 transition-all opacity-0">That's me!</p>
-						<div class="overflow-hidden relative rounded-xl group-hover:ring-[1px] bg-white/[0.02] ring-white/20 h-[475px] w-[250px] transition-all backdrop-blur-sm">
-							<img class="h-full object-cover" src="/me.webp" alt="">
+					<div
+						class="group right-1/3 md:right-1/2 top-1/2 w-fit absolute translate-x-1/2 -translate-y-1/2 -z-10"
+					>
+						<p
+							class="group-hover:opacity-100 transition-all opacity-0"
+						>
+							That's me!
+						</p>
+						<div
+							class="overflow-hidden relative rounded-xl group-hover:ring-[1px] bg-white/[0.02] ring-white/20 h-[475px] w-[250px] transition-all backdrop-blur-sm"
+						>
+							<img
+								class="h-full object-cover"
+								src="/me.webp"
+								alt=""
+							/>
+							
 						</div>
 					</div>
 					<div class="relative w-full">
@@ -39,7 +52,9 @@ import { data } from "../data";
 					<span
 						class="flex flex-col md:flex-row items-left justify-between md:items-center"
 					>
-						<p class="text-xl mb-2 md:mb-0 md:text-4xl opacity-50 font-semibold">
+						<p
+							class="text-xl mb-2 md:mb-0 md:text-4xl opacity-50 font-semibold"
+						>
 							{data.me.title}
 						</p>
 						<div class="flex items-center">
@@ -100,6 +115,8 @@ import { data } from "../data";
 								date={experience.data}
 								body={experience.description}
 								link={experience.link}
+								responsabilites={experience.responsabilites}
+								accomplishments={experience.accomplishments}
 							/>
 						))
 					}
