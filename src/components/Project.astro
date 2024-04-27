@@ -41,12 +41,14 @@ const { title, description, left = true, image, link, technologies } = Astro.pro
                 )
             }
         </div>
-        <div class="flex flex-wrap">
-            {technologies && technologies.map(tech =>
-                <p class="border-[1px] mt-2 px-4 rounded-full border-white/20 font mr-2 hover:bg-white/10 opacity-75 text-lg select-none transition-all">
-                    {tech}
-                </p>
-            )}
+        <div class="overflow-x-auto md:overflow-x-visible">
+            <div class="flex">
+                {technologies && technologies.map(tech =>
+                    <p class="border-[1px] mt-2 px-4 rounded-full border-white/20 font mr-2 hover:bg-white/10 opacity-75 text-lg select-none transition-all">
+                        {tech}
+                    </p>
+                )}
+            </div>
         </div>
         <p class="font-light opacity-75 text-lg text-pretty mt-2">
             {description}
