@@ -10,13 +10,22 @@ export const data = {
             title: "Fullstack Developer",
             subtitle: "Freelance",
             data: "2023 - Present",
-            description: "As a freelance Fullstack Developer, I've had the opportunity to work on diverse projects, crafting comprehensive information systems tailored to client needs. One notable project was for TintoTenis, where I developed a web application to streamline their order management process. Additionally, I contributed to Por Amor a Tobby, a web app aimed at aiding animal shelters in Baja California by showcasing animals available for adoption. Alongside these, I've completed various smaller projects, honing my skills and delivering solutions that meet client expectations."
+            responsabilites: ["Designed and developed custom web applications to meet specific client needs and streamline their operations(e.g., order management system for TintoTenis).",
+                "Collaborated directly with clients and designers to understand their requirements and translate them into functional and user- friendly web solutions.",
+                "Implemented and maintained full - stack web applications, ensuring smooth operation and efficient performance."],
+            accomplishments: ["Increased TintoTenis's order processing efficiency by 70% through development of a streamlined web application.",
+                "Contributed to 'Por Amor a Tobby' web app, selected to participate in the prestigious Re: Border 2024 conference, potentially impacting animal adoption rates in Baja California.",
+                "Successfully delivered multiple freelance projects, consistently exceeding client expectations and building a strong reputation for high - quality service."]
         },
         {
             title: "Programming Tutor",
             subtitle: "SuperProf",
             data: "2023 - Present",
-            description: "I've been providing private programming lessons via the SuperProf platform. Through this avenue, I've not only connected with potential clients but also fostered ongoing relationships. I've taught numerous students, maintaining a steady group of learners whom I continue to support. My lessons focus on web programming technologies and their foundational principles.",
+            responsabilites: ["Provided one-on-one instruction in web development fundamentals and specific technologies.",
+                "Mentored students by troubleshooting code, answering questions, and fostering a supportive learning environment.",
+                "Cultivated long-term student relationships through ongoing tutoring sessions."],
+            accomplishments: ["Built a consistent following of students on SuperProf, demonstrating effectiveness as a web programming tutor.",
+                "Empowered students to gain essential web development skills and advance their programming knowledge."],
             link: "https://www.superprof.mx/estudiante-ingenieria-ofrece-clases-programacion-html-css-node-react.html",
         }
     ],
@@ -66,7 +75,7 @@ export const data = {
         },
         {
             title: "Simple TTS",
-            description: "A Node.js package that encapsulates the functionality of the google-tts-api package, enabling quick and free text-to-speech conversion. With thousands of downloads, this package has gained popularity for its efficiency and ease of use.",
+            description: "A Node.js package that encapsulates the functionality of the google-tts-api package, enabling quick and free text-to-speech conversion. I made this project to generate easily tts in mp3 for my Discord Bots and I thought it was a good idea to share it, now it has hundreds of downloads.",
             technologies: ["Node.js"],
             link: "https://www.npmjs.com/package/simple-tts-mp3",
         },
