@@ -3,7 +3,7 @@ export const data = {
         name: "Elian Gerard",
         title: "Fullstack Developer",
         email: "eliangerardiso@gmail.com",
-        about: "Meticulous developer and engineering student with a profound passion for every facet of software development, specializing in frontend technologies. Fueled by a relentless drive for self-improvement, I am committed to delivering high-quality solutions that exceed expectations."
+        about: "Driven full-stack developer with a passion for crafting user-centric web solutions, adept at translating client needs into functional and intuitive digital experiences."
     },
     experience: [
         {
