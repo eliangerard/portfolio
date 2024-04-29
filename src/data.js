@@ -1,17 +1,18 @@
 export const data = {
     me: {
         name: "Elian Gerard",
-        title: "Fullstack Developer",
+        title: "Frontend Developer",
         email: "eliangerardiso@gmail.com",
-        about: "Driven full-stack developer with a passion for crafting user-centric web solutions, adept at translating client needs into functional and intuitive digital experiences."
+        about: "Engineering student specializing in Frontend development with solid understanding of other areas of development. Seeking a software engineer internship to collaborate and grow skills. Proficient in development with React and Node.js."
     },
     experience: [
         {
             title: "Fullstack Developer",
-            subtitle: "Por amor a Tobby (Freelance Project)",
+            subtitle: "Por amor a Tobby (Contractor)",
             data: "February 2024 - April 2024",
             responsabilites: [
-                "Collaborated closely with the client to design and develop a comprehensive web application, encompassing both user-friendly interfaces and robust functionalities.",
+                "Spearheaded the development of a responsive web application, from design to deployment, using Figma, React, Tailwind, Express, MySQL and Serverless solutions.",
+                "Implemented a monorepo structure to efficiently manage shared components between the administration panel and client version.",
             ],
             accomplishments: [
                 "Adopted by government animal control offices in Baja California, with the potential to significantly increase adoption rates.",
@@ -21,26 +22,31 @@ export const data = {
         },
         {
             title: "Fullstack Developer",
-            subtitle: "TintoTenis (Freelance Project)",
+            subtitle: "TintoTenis (Contractor)",
             data: "December 2023 - April 2024",
             responsabilites: [
-                "Collaborated with TintoTenis's UI/UX designer to bring mobile app to life.",
-                "Developed frontend, backend, and server configuration for a seamless user experience.",
+                "Developed a full stack responsive web application using React, Tailwind, Express, and MySQL.",
+                "Designed and implemented a robust database schema and API integrations.",
+                "Configured server, domain, and DDNS for reliable deployment.",
+                "Collaborated closely with TintoTenis s UI/UX designer for a seamless user experience.",
             ],
             accomplishments: [
-                "Increased TintoTenis's order processing efficiency by 70% through development of a streamlined web application.",
+                "Boosted order processing efficiency by 70% through web app development and process automation.",
             ]
         },
-
         {
             title: "Programming Tutor",
             subtitle: "SuperProf",
             data: "October 2023 - Present",
-            responsabilites: ["Provided one-on-one instruction in web development fundamentals and specific technologies.",
+            responsabilites: [
+                "Provided one-on-one instruction in web development fundamentals and specific technologies.",
                 "Mentored students by troubleshooting code, answering questions, and fostering a supportive learning environment.",
-                "Cultivated long-term student relationships through ongoing tutoring sessions."],
-            accomplishments: ["Built a consistent following of students on SuperProf, demonstrating effectiveness as a web programming tutor.",
-                "Empowered students to gain essential web development skills and advance their programming knowledge."],
+                "Cultivated long-term student relationships through ongoing tutoring sessions."
+            ],
+            accomplishments: [
+                "Built a consistent following of students on SuperProf, demonstrating effectiveness as a web programming tutor.",
+                "Empowered students to gain essential web development skills and advance their programming knowledge."
+            ],
             link: "https://www.superprof.mx/estudiante-ingenieria-ofrece-clases-programacion-html-css-node-react.html",
         }
     ],
@@ -49,22 +55,43 @@ export const data = {
             title: "Computer Systems Engineer",
             subtitle: "Tecnológico Nacional de México Campus Chihuahua II",
             data: "January 2020 - Present",
-            description: "Focusing on technologies such as Java, Node.js, HTML, CSS, and JavaScript, as well as proficiency in MySQL and MongoDB for database management, deployment experience with cloud platforms like AWS, alongside network administration. Actively involved in competitions and community engagement initiatives in the city.",
+            list: [
+                "Proficient in Java, Node.js, HTML, CSS, JavaScript, MySQL, and MongoDB.",
+                "Experienced in cloud deployment with AWS, network administration and Software Engineer methodologies.",
+                "Active participant in coding competitions, hackathons and community initiatives."
+            ],
             link: "/Reticula-ISC-2023.webp",
         },
+    ],
+    technologies: [
         {
-            title: "React (Hooks & MERN)",
-            subtitle: "Udemy - Fernando Herrera",
-            data: "Certification",
-            description: "Learning about Hooks, Redux, Router and Testing, fullstack integration, and more.",
+            name: "React",
             link: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-016de529-146c-4e5e-aa3a-7b5924591833.pdf",
         },
         {
-            title: "Node.js - Zero to Expert",
-            subtitle: "Udemy - Fernando Herrera",
-            data: "Certification",
-            description: "Learning about Sockets, APIs, Authentication, Deployment, MongoDB, and more.",
-            link: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-c2bbdd5b-64cb-482b-9368-3bdc3cbca820.pdf",
+            name: "Node.js",
+            link: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-c2bbdd5b-64cb-482b-9368-3bdc3cbca820.pdf"
+        },
+        {
+            name: "Next.js",
+        },
+        {
+            name: "Tailwind",
+        },
+        {
+            name: "Figma",
+        },
+        {
+            name: "MySQL",
+        },
+        {
+            name: "MongoDB",
+        },
+        {
+            name: "Git",
+        },
+        {
+            name: "Docker",
         },
     ],
     projects: [
