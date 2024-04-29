@@ -8,11 +8,12 @@ interface Props {
 	body?: string;
 	responsabilites?: string[];
 	accomplishments?: string[];
+	list?: string[];
 	date: string;
 	link?: string;
 }
 
-const { title, subtitle, body, date, link, responsabilites, accomplishments } =
+const { title, subtitle, body, date, link, responsabilites, accomplishments, list } =
 	Astro.props;
 ---
 
@@ -51,7 +52,7 @@ const { title, subtitle, body, date, link, responsabilites, accomplishments } =
 		{
 			responsabilites && (
 				<div class="">
-					<h4 class="font-medium text-lg mt-2">Responsabilites:</h4>
+					<h4 class="font-medium text-lg mt-2">Responsabilites</h4>
 					<ul class="list-disc mt-2 ml-6">
 						{responsabilites.map((responsability) => (
 							<li class="font-light opacity-75 text-lg">
@@ -65,7 +66,7 @@ const { title, subtitle, body, date, link, responsabilites, accomplishments } =
 		{
 			accomplishments && (
 				<div class="">
-					<h4 class="font-medium text-lg mt-2">Accomplishments:</h4>
+					<h4 class="font-medium text-lg mt-2">Accomplishments</h4>
 					<ul class="list-disc  ml-6 mt-2">
 						{accomplishments.map((accomplishment) => (
 							<li class="font-light opacity-75 text-lg">
@@ -74,6 +75,15 @@ const { title, subtitle, body, date, link, responsabilites, accomplishments } =
 						))}
 					</ul>
 				</div>
+			)
+		}
+		{
+			list && (
+				<ul class="list-disc mt-2 ml-6">
+					{list.map((item) => (
+						<li class="font-light opacity-75 text-lg">{item}</li>
+					))}
+				</ul>
 			)
 		}
 	</div>
