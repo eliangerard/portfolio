@@ -3,7 +3,7 @@ export const data = {
         name: "Elian Gerard",
         title: "Frontend Developer",
         email: "eliangerardiso@gmail.com",
-        about: "Engineering student specializing in Frontend development with solid understanding of other areas of development. Seeking a software engineer internship to collaborate and grow skills. Proficient in development with React and Node.js."
+        about: "Engineering student specializing in Frontend development with solid understanding of other areas of development. Seeking a software development internship to collaborate and grow skills. Proficient in development with React and Node.js."
     },
     experience: [
         {
@@ -54,7 +54,7 @@ export const data = {
         {
             title: "Computer Systems Engineer",
             subtitle: "Tecnológico Nacional de México Campus Chihuahua II",
-            data: "January 2020 - Present",
+            data: "August 2020 - Present",
             list: [
                 "Proficient in Java, Node.js, HTML, CSS, JavaScript, MySQL, and MongoDB.",
                 "Experienced in cloud deployment with AWS, network administration and Software Engineer methodologies.",
