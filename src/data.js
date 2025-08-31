@@ -3,9 +3,24 @@ export const data = {
         name: "Elian Gerard",
         title: "Frontend Developer",
         email: "eliangerardiso@gmail.com",
-        about: "Engineering student specializing in Frontend development with solid understanding of other areas of development. Seeking a software development internship to collaborate and grow skills. Proficient in development with React and Node.js."
+        about: "Frontend-focused Software Engineer with hands-on experience building scalable web applications using React, Next.js, and modern development practices. Certified in React and Node.js, with a strong foundation in full-stack development and a passion for creating seamless user experiences."
     },
     experience: [
+        {
+            title: "Associate Systems Engineer",
+            subtitle: "AutoZone BTSSC",
+            data: "August 2024 - Currently",
+            responsabilites: [
+                "Developed scalable and responsive user interfaces using React.js and Next.js, aligned with design specifications.",
+                "Collaborated cross-functionally with Product Owners, QA analysts, and UI/UX team to deliver high-impact features.",
+            ],
+            accomplishments: [
+                "Led the redesign of the Order History and Order Details pages, enhancing usability and visual consistency across the platform.",
+                'Spearheaded the development of a Customer Reviews feature, resulting in a 5x increase in review submissions.',
+                'Delivered multiple high-priority features that improved customer experience and aligned with business goals.',
+            ],
+            link: "https://autozone.com/",
+        },
         {
             title: "Fullstack Developer",
             subtitle: "Por amor a Tobby (Contractor)",
@@ -54,11 +69,12 @@ export const data = {
         {
             title: "Computer Systems Engineer",
             subtitle: "Tecnológico Nacional de México Campus Chihuahua II",
-            data: "August 2020 - Present",
+            data: "August 2020 - December 2024",
             list: [
                 "Proficient in Java, Node.js, HTML, CSS, JavaScript, MySQL, and MongoDB.",
                 "Experienced in cloud deployment with AWS, network administration and Software Engineer methodologies.",
-                "Active participant in coding competitions, hackathons and community initiatives."
+                "Active participant in coding competitions, hackathons and community initiatives.",
+                "Fullstack Development specialization."
             ],
             link: "/Reticula-ISC-2023.webp",
         },
