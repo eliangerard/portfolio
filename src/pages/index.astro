@@ -10,237 +10,205 @@ import { data } from "../data";
 ---
 
 <Layout title="Elian Gerard">
-	<main
-		class="relative z-30 min-h-screen flex flex-col items-center min-w-full w-full p-4 md:p-0"
-	>
-		<div class="flex flex-col items-center max-w-screen-md w-full">
-			<div class="h-screen flex items-center justify-center w-full">
-				<div class="relative md:px-12 md:p-0 w-full md:w-fit z-10">
-					<div class="flex items-end justify-between">
-						<p
-							class="font-[MuseoModerno] font-bold text-2xl md:text-5xl w-40"
-						>
-							Hi! I'm
-						</p>
-					</div>
-					<div
-						class="group right-1/3 md:right-1/2 top-1/2 w-fit absolute translate-x-1/2 -translate-y-1/2 -z-10"
-					>
-						<p
-							id="thats-me"
-							class="group-hover:opacity-100 group-focus:opacity-100 transition-all opacity-0"
-						>
-							That's me!
-						</p>
-						<div
-							id="img-me"
-							class="overflow-hidden relative rounded-xl group-hover:ring-[1px] bg-white/[0.02] ring-white/20 h-[475px] w-[250px] transition-all backdrop-blur-sm"
-						>
-							<img
-								class="h-full object-cover"
-								src="/me.webp"
-								alt=""
-							/>
-						</div>
-					</div>
-					<div class="relative w-full">
-						<h1
-							class="font-bold font-[Montserrat] text-7xl w-32 md:w-fit md-fit md:text-8xl text-left -ml-[5px]"
-						>
-							{data.me.name}
-						</h1>
-					</div>
-					<span
-						class="flex flex-col md:flex-row items-left justify-between md:items-center"
-					>
-						<p
-							class="text-xl mb-2 md:mb-0 md:text-4xl opacity-50 font-semibold"
-						>
-							{data.me.title}
-						</p>
-						<div class="flex items-center">
-							<a
-								href="https://github.com/eliangerard/"
-								target="_blank"
-								class="h-full w-12 hover:ring-[1px] ring-white/20 p-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
-							>
-								<img
-									class="h-8 w-8"
-									src={github.src}
-									alt="github"
-								/>
-							</a>
-							<a
-								href="https://www.linkedin.com/in/eliangerard/"
-								target="_blank"
-								class="h-full w-12 hover:ring-[1px] ring-white/20 p-2 ml-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
-							>
-								<img
-									class="h-8 w-8"
-									src={linkedin.src}
-									alt="linkedin"
-								/>
-							</a>
-							<a
-								href="mailto:eliangerardiso@gmail.com"
-								target="_blank"
-								class="h-full w-12 p-2 hover:ring-[1px] ring-white/20 ml-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
-							>
-								<img
-									class="h-8 w-8"
-									src={mail.src}
-									alt="linkedin"
-								/>
-							</a>
-						</div>
-					</span>
-				</div>
-			</div>
-			<div id="about" class="pt-32">
-				<h2 class="font-bold text-3xl font-[MuseoModerno]">About</h2>
-				<p class="font-light opacity-75 text-lg text-pretty">
-					{data.me.about}
-				</p>
-			</div>
-			<div id="experience" class="pt-32">
-				<h2 class="font-bold text-3xl font-[MuseoModerno] my-4">
-					Experience
-				</h2>
+  <main
+    class="relative z-30 min-h-screen flex flex-col items-center min-w-full w-full p-4 md:p-0"
+  >
+    <div class="flex flex-col items-center max-w-screen-md w-full">
+      <div class="h-screen flex items-center justify-center w-full">
+        <div class="relative md:px-12 md:p-0 w-full md:w-fit z-10">
+          <div class="flex items-end justify-between">
+            <p class="font-[MuseoModerno] font-bold text-2xl md:text-5xl w-40">
+              Hi! I'm
+            </p>
+          </div>
+          <div
+            class="group right-1/3 md:right-1/2 top-1/2 w-fit absolute translate-x-1/2 -translate-y-1/2 -z-10"
+          >
+            <p
+              id="thats-me"
+              class="group-hover:opacity-100 group-focus:opacity-100 transition-all opacity-0"
+            >
+              That's me!
+            </p>
+            <div
+              id="img-me"
+              class="overflow-hidden relative rounded-xl group-hover:ring-[1px] bg-white/[0.02] ring-white/20 h-[475px] w-[250px] transition-all backdrop-blur-sm"
+            >
+              <img class="h-full object-cover" src="/me.webp" alt="" />
+            </div>
+          </div>
+          <div class="relative w-full">
+            <h1
+              class="font-bold font-[Montserrat] text-7xl w-32 md:w-fit md-fit md:text-8xl text-left -ml-[5px]"
+            >
+              {data.me.name}
+            </h1>
+          </div>
+          <span
+            class="flex flex-col md:flex-row items-left justify-between md:items-center"
+          >
+            <p
+              class="text-xl mb-2 md:mb-0 md:text-4xl opacity-50 font-semibold"
+            >
+              {data.me.title}
+            </p>
+            <div class="flex items-center">
+              <a
+                href="https://github.com/eliangerard/"
+                target="_blank"
+                class="h-full w-12 hover:ring-[1px] ring-white/20 p-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
+              >
+                <img class="h-8 w-8" src={github.src} alt="github" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/eliangerard/"
+                target="_blank"
+                class="h-full w-12 hover:ring-[1px] ring-white/20 p-2 ml-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
+              >
+                <img class="h-8 w-8" src={linkedin.src} alt="linkedin" />
+              </a>
+              <a
+                href="mailto:eliangerardiso@gmail.com"
+                target="_blank"
+                class="h-full w-12 p-2 hover:ring-[1px] ring-white/20 ml-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
+              >
+                <img class="h-8 w-8" src={mail.src} alt="linkedin" />
+              </a>
+            </div>
+          </span>
+        </div>
+      </div>
+      <div id="about" class="pt-32">
+        <h2 class="font-bold text-3xl font-[MuseoModerno]">About</h2>
+        <p class="font-light opacity-75 text-lg text-pretty">
+          {data.me.about}
+        </p>
+      </div>
+      <div id="experience" class="pt-32">
+        <h2 class="font-bold text-3xl font-[MuseoModerno] my-4">Experience</h2>
 
-				<ul>
-					{
-						data.experience.map((experience) => (
-							<Card
-								title={experience.title}
-								subtitle={experience.subtitle}
-								date={experience.data}
-								body={experience.description}
-								link={experience.link}
-								responsabilites={experience.responsabilites}
-								accomplishments={experience.accomplishments}
-							/>
-						))
-					}
-				</ul>
-			</div>
-			<div id="skills" class="pt-8">
-				<h2 class="font-bold text-3xl font-[MuseoModerno] my-4">
-					Skills
-				</h2>
+        <ul>
+          {
+            data.experience.map((experience) => (
+              <Card
+                title={experience.title}
+                subtitle={experience.subtitle}
+                date={experience.date}
+                body={experience.description}
+                link={experience.link}
+                highlights={experience.highlights}
+              />
+            ))
+          }
+        </ul>
+      </div>
+      <div id="skills" class="pt-8">
+        <h2 class="font-bold text-3xl font-[MuseoModerno] my-4">Education</h2>
 
-				<ul>
-					{
-						data.skills.map((skill) => (
-							<Card
-								title={skill.title}
-								subtitle={skill.subtitle}
-								date={skill.data}
-								body={skill?.description}
-								link={skill.link}
-								list={skill?.list}
-							/>
-						))
-					}
-				</ul>
-				<ul
-					class="flex flex-wrap items-center justify-center select-none"
-				>
-					{
-						data.technologies.map((tech) =>
-							tech.link ? (
-								<a
-									class="relative flex flex-col h-20 mx-2 md:mx-4 w-12 items-center justify-center group hover:drop-shadow-[0_0px_5px_rgba(255,255,255,0.75)] duration-500 transition-all "
-									href={tech.link}
-								>
-									<img
-										class="h-10 w-10 transition-all"
-										src={
-											"/tech-stack/" +
-											tech.name
-												.toLocaleLowerCase()
-												.replace(".", "") +
-											".svg"
-										}
-										alt={tech.name + " icon"}
-									/>
-									<p class="max-h-0 opacity-0 group-hover:max-h-32 group-hover:opacity-100 transition-all duration-500">
-										{tech.name}
-									</p>
-								</a>
-							) : (
-								<div class="relative flex flex-col mx-2 md:mx-4 h-20 w-12 items-center justify-center group hover:drop-shadow-[0_0px_5px_rgba(255,255,255,0.75)] duration-500 transition-all ">
-									<img
-										class="h-10 w-10 transition-all"
-										src={
-											"/tech-stack/" +
-											tech.name
-												.toLocaleLowerCase()
-												.replace(".", "") +
-											".svg"
-										}
-										alt={tech.name + " icon"}
-									/>
-									<p class="max-h-0 opacity-0 group-hover:max-h-32 group-hover:opacity-100 transition-all duration-500">
-										{tech.name}
-									</p>
-								</div>
-							),
-						)
-					}
-				</ul>
-			</div>
-			<div id="projects" class="pt-32 w-full">
-				<h2 class="font-bold text-3xl font-[MuseoModerno] my-4">
-					Projects
-				</h2>
+        <ul>
+          {
+            data.education.map((education) => (
+              <Card
+                title={education.title}
+                subtitle={education.subtitle}
+                date={education.date}
+                link={education.link}
+                highlights={education.highlights}
+              />
+            ))
+          }
+        </ul>
+        <ul class="flex flex-wrap items-center justify-center select-none">
+          {
+            data.technologies.map((tech) =>
+              tech.link ? (
+                <a
+                  class="relative flex flex-col h-20 mx-2 md:mx-4 w-12 items-center justify-center group hover:drop-shadow-[0_0px_5px_rgba(255,255,255,0.75)] duration-500 transition-all "
+                  href={tech.link}
+                >
+                  <img
+                    class="h-10 w-10 transition-all"
+                    src={
+                      "/tech-stack/" +
+                      tech.name.toLocaleLowerCase().replace(".", "") +
+                      ".svg"
+                    }
+                    alt={tech.name + " icon"}
+                  />
+                  <p class="max-h-0 opacity-0 group-hover:max-h-32 group-hover:opacity-100 transition-all duration-500">
+                    {tech.name}
+                  </p>
+                </a>
+              ) : (
+                <div class="relative flex flex-col mx-2 md:mx-4 h-20 w-12 items-center justify-center group hover:drop-shadow-[0_0px_5px_rgba(255,255,255,0.75)] duration-500 transition-all ">
+                  <img
+                    class="h-10 w-10 transition-all"
+                    src={
+                      "/tech-stack/" +
+                      tech.name.toLocaleLowerCase().replace(".", "") +
+                      ".svg"
+                    }
+                    alt={tech.name + " icon"}
+                  />
+                  <p class="max-h-0 opacity-0 group-hover:max-h-32 group-hover:opacity-100 transition-all duration-500">
+                    {tech.name}
+                  </p>
+                </div>
+              ),
+            )
+          }
+        </ul>
+      </div>
+      <div id="projects" class="pt-32 w-full">
+        <h2 class="font-bold text-3xl font-[MuseoModerno] my-4">Projects</h2>
 
-				<ul class="flex flex-col md:flex-row md:flex-wrap md:px-4">
-					{
-						data.projects.map((project) => (
-							<Project
-								title={project.title}
-								description={project.description}
-								image={project.image}
-								link={project.link}
-								technologies={project.technologies}
-							/>
-						))
-					}
-				</ul>
-			</div>
-		</div>
-		<footer
-			class="h-64 max-w-64 w-full flex flex-col items-center justify-center"
-		>
-			<div class="flex items-center justify-around mb-6">
-				<a
-					href="https://github.com/eliangerard/"
-					target="_blank"
-					class="h-full w-12 hover:ring-[1px] ring-white/20 p-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
-				>
-					<img class="h-8 w-8" src={github.src} alt="github" />
-				</a>
-				<a
-					href="https://www.linkedin.com/in/eliangerard/"
-					target="_blank"
-					class="h-full w-12 hover:ring-[1px] ring-white/20 p-2 ml-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
-				>
-					<img class="h-8 w-8" src={linkedin.src} alt="linkedin" />
-				</a>
-				<a
-					href="mailto:eliangerardiso@gmail.com"
-					target="_blank"
-					class="h-full w-12 p-2 hover:ring-[1px] ring-white/20 ml-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
-				>
-					<img class="h-8 w-8" src={mail.src} alt="linkedin" />
-				</a>
-			</div>
-			<p>
-				2024 - Made by
-				<a
-					class="font-semibold underline"
-					href="#top"
-					onclick="
+        <ul class="flex flex-col md:flex-row md:flex-wrap md:px-4">
+          {
+            data.projects.map((project) => (
+              <Project
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                link={project.link}
+                technologies={project.technologies}
+              />
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+    <footer
+      class="h-64 max-w-64 w-full flex flex-col items-center justify-center"
+    >
+      <div class="flex items-center justify-around mb-6">
+        <a
+          href="https://github.com/eliangerard/"
+          target="_blank"
+          class="h-full w-12 hover:ring-[1px] ring-white/20 p-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
+        >
+          <img class="h-8 w-8" src={github.src} alt="github" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/eliangerard/"
+          target="_blank"
+          class="h-full w-12 hover:ring-[1px] ring-white/20 p-2 ml-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
+        >
+          <img class="h-8 w-8" src={linkedin.src} alt="linkedin" />
+        </a>
+        <a
+          href="mailto:eliangerardiso@gmail.com"
+          target="_blank"
+          class="h-full w-12 p-2 hover:ring-[1px] ring-white/20 ml-2 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg font-bold text-black/50 transition-all"
+        >
+          <img class="h-8 w-8" src={mail.src} alt="linkedin" />
+        </a>
+      </div>
+      <p>
+        2026 - Made by
+        <a
+          class="font-semibold underline"
+          href="#top"
+          onclick="
 						setTimeout(() => {
 							document.getElementById('thats-me').classList.add('!opacity-100')
 							document.getElementById('img-me').classList.add('!ring-[1px]')
@@ -250,9 +218,9 @@ import { data } from "../data";
 							}, 2000)
 						}, 1000)
 						"
-					>me!</a
-				>
-			</p>
-		</footer>
-	</main>
+          >me!</a
+        >
+      </p>
+    </footer>
+  </main>
 </Layout>

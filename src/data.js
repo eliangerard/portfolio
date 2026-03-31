@@ -1,83 +1,77 @@
 export const data = {
     me: {
         name: "Elian Gerard",
-        title: "Frontend Developer",
+        title: "Frontend Engineer",
         email: "eliangerardiso@gmail.com",
-        about: "Frontend-focused Software Engineer with hands-on experience building scalable web applications using React, Next.js, and modern development practices. Certified in React and Node.js, with a strong foundation in full-stack development and a passion for creating seamless user experiences."
+        about:
+            "Frontend Software Engineer specializing in high-performance, scalable web applications with React and Next.js. I build fast, accessible, and pixel-perfect user experiences that drive measurable business impact, with a strong focus on performance, usability, and clean architecture."
     },
     experience: [
         {
+            title: "Systems Engineer",
+            subtitle: "AutoZone BTSSC",
+            date: "March 2026 - Present",
+            highlights: [
+                "Own and deliver high-performance UI features using React.js and Next.js for a large-scale e-commerce platform.",
+                "Led the Customer Reviews feature across multiple regions, driving a 5x+ increase in user-generated reviews (+400% YoY).",
+                "Improved review quality by ~40% through optimized submission flows in Order History.",
+                "Contributed to AutoZone’s React design system and led frontend refactors improving performance and maintainability.",
+                "Collaborate cross-functionally to ship high-impact features under tight deadlines."
+            ],
+            link: "https://autozone.com/"
+        },
+        {
             title: "Associate Systems Engineer",
             subtitle: "AutoZone BTSSC",
-            data: "August 2024 - Currently",
-            responsabilites: [
-                "Developed scalable and responsive user interfaces using React.js and Next.js, aligned with design specifications.",
-                "Collaborated cross-functionally with Product Owners, QA analysts, and UI/UX team to deliver high-impact features.",
+            date: "August 2024 - March 2026",
+            highlights: [
+                "Built and shipped production-grade UI features with React.js and Next.js for millions of users.",
+                "Redesigned Order History and Order Details pages end-to-end, improving usability and consistency.",
+                "Launched the Customer Reviews feature in the US, driving a 5x increase in user-generated reviews.",
+                "Focused on performance optimization, reducing layout shift and improving user experience.",
+                "Partnered with Product, QA, and Design to deliver high-priority features on schedule."
             ],
-            accomplishments: [
-                "Led the redesign of the Order History and Order Details pages, enhancing usability and visual consistency across the platform.",
-                'Spearheaded the development of a Customer Reviews feature, resulting in a 5x increase in review submissions.',
-                'Delivered multiple high-priority features that improved customer experience and aligned with business goals.',
-            ],
-            link: "https://autozone.com/",
+            link: "https://autozone.com/"
         },
         {
             title: "Fullstack Developer",
-            subtitle: "Por amor a Tobby (Contractor)",
-            data: "February 2024 - April 2024",
-            responsabilites: [
-                "Spearheaded the development of a responsive web application, from design to deployment, using Figma, React, Tailwind, Express, MySQL and Serverless solutions.",
-                "Implemented a monorepo structure to efficiently manage shared components between the administration panel and client version.",
-            ],
-            accomplishments: [
-                "Adopted by government animal control offices in Baja California, with the potential to significantly increase adoption rates.",
-                'It will be showcased at the RE: Border 2024 conference on "Designing Oportunidades".',
-            ],
-            link: "https://poramoratobby.com/",
-        },
-        {
-            title: "Fullstack Developer",
-            subtitle: "TintoTenis (Contractor)",
-            data: "December 2023 - April 2024",
-            responsabilites: [
-                "Developed a full stack responsive web application using React, Tailwind, Express, and MySQL.",
-                "Designed and implemented a robust database schema and API integrations.",
-                "Configured server, domain, and DDNS for reliable deployment.",
-                "Collaborated closely with TintoTenis s UI/UX designer for a seamless user experience.",
-            ],
-            accomplishments: [
-                "Boosted order processing efficiency by 70% through web app development and process automation.",
+            subtitle: "TintoTenis",
+            date: "December 2023 - April 2025",
+            highlights: [
+                "Architected and built a full-stack web app using React, Tailwind, Express, and MySQL.",
+                "Designed database schema, REST APIs, and backend infrastructure from scratch.",
+                "Managed deployment, server configuration, and domain setup end-to-end.",
+                "Collaborated closely with design to deliver a polished and intuitive user experience.",
+                "Digitized core business operations, improving efficiency and data visibility."
             ]
         },
         {
             title: "Programming Tutor",
             subtitle: "SuperProf",
-            data: "October 2023 - Present",
-            responsabilites: [
-                "Provided one-on-one instruction in web development fundamentals and specific technologies.",
-                "Mentored students by troubleshooting code, answering questions, and fostering a supportive learning environment.",
-                "Cultivated long-term student relationships through ongoing tutoring sessions."
+            date: "October 2023 - June 2025",
+            highlights: [
+                "Provide 1-on-1 coaching in web development (HTML, CSS, React, Node.js).",
+                "Debug complex student projects in real time, strengthening problem-solving skills.",
+                "Mentor students toward job-ready development skills and best practices.",
+                "Built a strong base of returning students through high-quality instruction.",
+                "Helped multiple students successfully transition into web development."
             ],
-            accomplishments: [
-                "Built a consistent following of students on SuperProf, demonstrating effectiveness as a web programming tutor.",
-                "Empowered students to gain essential web development skills and advance their programming knowledge."
-            ],
-            link: "https://www.superprof.mx/estudiante-ingenieria-ofrece-clases-programacion-html-css-node-react.html",
+            link: "https://www.superprof.mx/estudiante-ingenieria-ofrece-clases-programacion-html-css-node-react.html"
         }
     ],
-    skills: [
+    education: [
         {
             title: "Computer Systems Engineer",
             subtitle: "Tecnológico Nacional de México Campus Chihuahua II",
-            data: "August 2020 - December 2024",
-            list: [
-                "Proficient in Java, Node.js, HTML, CSS, JavaScript, MySQL, and MongoDB.",
-                "Experienced in cloud deployment with AWS, network administration and Software Engineer methodologies.",
-                "Active participant in coding competitions, hackathons and community initiatives.",
-                "Fullstack Development specialization."
+            date: "August 2020 - December 2024",
+            highlights: [
+                "Strong foundation in JavaScript, Node.js, databases, and software engineering principles.",
+                "Experience with AWS, networking, and Agile methodologies.",
+                "Active participant in hackathons and coding competitions.",
+                "Specialized in Full-Stack Development."
             ],
-            link: "/Reticula-ISC-2023.webp",
-        },
+            link: "/Reticula-ISC-2023.webp"
+        }
     ],
     technologies: [
         {
@@ -90,6 +84,10 @@ export const data = {
         },
         {
             name: "Next.js",
+        },
+        {
+            name: "GCP",
+            link: "https://www.credly.com/badges/f2b73bce-eceb-41af-9925-1d0a636b88ed"
         },
         {
             name: "Tailwind",
@@ -113,37 +111,42 @@ export const data = {
     projects: [
         {
             title: "Por Amor a Tobby",
-            description: "Contributed to Por Amor a Tobby, a web app aimed at aiding animal shelters in Baja California. The app showcases animals available for adoption, allowing users to view photos, descriptions, and adoption requirements. The app also includes an admin panel for managing animal data and user applications.",
+            description:
+                "Web platform for animal shelters to manage and showcase pets for adoption, including a full admin panel for listings and applications.",
             technologies: ["React", "Node.js", "MySQL", "Express", "Tailwind", "Figma"],
             image: "/pat.webp",
-            link: "https://poramoratobby.com/",
+            link: "https://poramoratobby.com/"
         },
         {
             title: "TintoTenis",
-            description: "Developed a web application for TintoTenis, a local tennis academy. The app streamlines their order management process, allowing users to register for classes, pay for services, and view upcoming events. The app also includes an admin panel for managing user data and generating reports.",
+            description:
+                "End-to-end platform for a tennis academy covering class management, payments, and reporting through a custom dashboard.",
             technologies: ["React", "Node.js", "MySQL", "Express", "Tailwind"],
-            image: "/tt.webp",
+            image: "/tt.webp"
         },
         {
             title: "NavegaTec",
-            description: "NavegaTec is a web application designed to serve as a map of our university campus, providing students with information about upcoming events and their locations. Collaborating with UI/UX designer Alex, we developed this tool as part of our community service initiative during our time at the university.",
+            description:
+                "Interactive campus map to help students navigate and discover events in real time.",
             technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind", "Figma"],
             image: "/nt.webp",
-            link: "https://navegatest.vercel.app/",
+            link: "https://navegatest.vercel.app/"
         },
         {
             title: "SimpleTTS",
-            description: "A Node.js package that encapsulates the functionality of the google-tts-api package, enabling quick and free text-to-speech conversion. I made this project to generate easily tts in mp3 for my Discord Bots and I thought it was a good idea to share it, now it has hundreds of downloads.",
+            description:
+                "Open-source Node.js package for simple text-to-speech conversion to MP3, published on npm.",
             technologies: ["Node.js"],
             image: "/stts.png",
-            link: "https://www.npmjs.com/package/simple-tts-mp3",
+            link: "https://www.npmjs.com/package/simple-tts-mp3"
         },
         {
             title: "Minemadness",
-            description: "A mobile game based in the traiditional game Minesweeper, but with a twist, scoring points and getting powerups before the time runs out. This game was made with Unity and C# and it's available on Google Play Store and Huawei AppGallery.",
+            description:
+                "Arcade-style game built with Unity and C#, published on Google Play and Huawei AppGallery.",
             technologies: ["Unity", "C#"],
             image: "/mm.webp",
             link: "https://play.google.com/store/apps/details?id=com.GAMEMZ.Minemadness"
         }
-    ],
-}
+    ]
+};
