@@ -1,0 +1,30 @@
+---
+import Link from "../ui/icons/Link.astro";
+
+interface Props {
+    name: string;
+    issuer: string;
+    icon: string;
+    link?: string;
+}
+
+const { name, issuer, icon, link } = Astro.props;
+
+const Tag = link ? "a" : "div";
+---
+
+<Tag
+    href={link}
+    target={link ? "_blank" : undefined}
+    rel={link ? "noopener noreferrer" : undefined}
+    class="flex items-center hover:ring-[1px] ring-white/20 p-3 pr-4 bg-white/[0.06] hover:bg-white/[0.1] rounded-lg transition-all"
+>
+    <img class="h-9 w-9 shrink-0" src={icon} alt="" />
+    <span class="flex flex-col ml-3 leading-tight">
+        <span class="flex items-center font-semibold">
+            {name}
+            {link && <Link />}
+        </span>
+        <span class="font-light opacity-75 text-sm">{issuer}</span>
+    </span>
+</Tag>

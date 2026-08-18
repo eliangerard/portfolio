@@ -1,8 +1,18 @@
 export const data = {
     me: {
         name: "Elian Gerard",
+        legalName: "Elian Ramiro Gerard Ramos",
         title: "Frontend Engineer",
         email: "eliangerardiso@gmail.com",
+        url: "https://eliangerard.com",
+        location: "Chihuahua, Mexico",
+        // Kept near 155 characters so search results show it whole.
+        seoDescription:
+            "Frontend engineer building fast, accessible web apps with React and Next.js. Currently at AutoZone, and the maker of Vinqua, Orablo and Dahibi.",
+        profiles: {
+            github: "https://github.com/eliangerard/",
+            linkedin: "https://www.linkedin.com/in/eliangerard/"
+        },
         about:
             "Frontend Software Engineer specializing in high-performance, scalable web applications with React and Next.js. I build fast, accessible, and pixel-perfect user experiences that drive measurable business impact, with a strong focus on performance, usability, and clean architecture."
     },
@@ -73,6 +83,14 @@ export const data = {
             link: "/Reticula-ISC-2023.webp"
         }
     ],
+    certifications: [
+        {
+            name: "Associate Cloud Engineer",
+            issuer: "Google Cloud",
+            icon: "/tech-stack/gcp.svg",
+            link: "https://www.credly.com/badges/f2b73bce-eceb-41af-9925-1d0a636b88ed"
+        }
+    ],
     technologies: [
         {
             name: "React",
@@ -84,10 +102,6 @@ export const data = {
         },
         {
             name: "Next.js",
-        },
-        {
-            name: "GCP",
-            link: "https://www.credly.com/badges/f2b73bce-eceb-41af-9925-1d0a636b88ed"
         },
         {
             name: "Tailwind",
@@ -109,6 +123,30 @@ export const data = {
         },
     ],
     projects: [
+        {
+            title: "Vinqua",
+            description:
+                "Free VIN check that pulls every public U.S. government record on a vehicle into one report: full specification decode, open safety recalls, the parts owners most often report failing, crash-test ratings and real-world fuel economy. No account and no card.",
+            technologies: ["Next.js", "React", "TypeScript", "Tailwind", "Cloudflare Workers"],
+            image: "/vinqua.webp",
+            link: "https://vinqua.com/"
+        },
+        {
+            title: "Orablo",
+            description:
+                "Daily English pronunciation practice. Every day is a new edition of ten words and the sentences they live in, graded in the browser by speech recognition.",
+            technologies: ["Next.js", "React", "TypeScript", "Tailwind", "Cloudflare Workers"],
+            image: "/orablo.webp",
+            link: "https://orablo.com/"
+        },
+        {
+            title: "Dahibi",
+            description:
+                "One moodboard per day for anything that runs on days. Each day is an infinite canvas for photos, notes and colour swatches, and it is local-first, so everything stays in the browser.",
+            technologies: ["Next.js", "React", "TypeScript", "Tailwind", "IndexedDB"],
+            image: "/dahibi.webp",
+            link: "https://dahibi.com/"
+        },
         {
             title: "Por Amor a Tobby",
             description:
