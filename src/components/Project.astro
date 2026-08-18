@@ -14,14 +14,16 @@ const { title, description, left = true, image, link, technologies } = Astro.pro
 ---
 
 <li
-    class={`bg-black/0 hover:bg-white/[0.05] hover:backdrop-blur-xl hover:ring-1 ring-white/20 rounded-xl my-2 md:mx-2 p-4 flex flex-col min-w-1/2 w-full transition-all`}
+    class={`bg-black/0 hover:bg-white/[0.05] hover:backdrop-blur-xl hover:ring-1 ring-white/20 rounded-xl my-2 md:mx-2 p-4 flex flex-col w-full transition-all`}
 >
     {
         image ? (
             <img
                 class="w-full h-[250px] md:h-[400px] object-cover rounded-lg"
                 src={image}
-                alt={title}
+                alt={`${title} screenshot`}
+                loading="lazy"
+                decoding="async"
             />
         ) : (
             <div class="w-full h-[250px] md:h-[400px] flex items-center justify-center font-bold text-3xl bg-white/30 rounded-xl">

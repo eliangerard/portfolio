@@ -3,29 +3,146 @@ import BigIcon from "../components/BigIcon.astro";
 import Glow from "../components/Glow.astro";
 import Header from "../components/Header.astro";
 import { data } from "../data";
+import "../styles/global.css";
 
 interface Props {
 	title: string;
+	description?: string;
+	image?: string;
 }
 
-const { title } = Astro.props;
+const {
+	title,
+	description = data.me.seoDescription,
+	image = "/og.jpg",
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const socialImage = new URL(image, Astro.site).href;
+
+const person = {
+	"@type": "Person",
+	"@id": `${data.me.url}/#person`,
+	name: data.me.name,
+	alternateName: data.me.legalName,
+	jobTitle: data.me.title,
+	description: data.me.about,
+	url: data.me.url,
+	image: socialImage,
+	email: `mailto:${data.me.email}`,
+	sameAs: [data.me.profiles.github, data.me.profiles.linkedin],
+	address: {
+		"@type": "PostalAddress",
+		addressLocality: "Chihuahua",
+		addressCountry: "MX",
+	},
+	worksFor: {
+		"@type": "Organization",
+		name: "AutoZone",
+		url: "https://autozone.com/",
+	},
+	alumniOf: {
+		"@type": "CollegeOrUniversity",
+		name: data.education[0].subtitle,
+	},
+	knowsAbout: [
+		...data.technologies.map((tech) => tech.name),
+		...data.certifications.map((cert) => cert.issuer),
+	],
+	hasCredential: data.certifications.map((cert) => ({
+		"@type": "EducationalOccupationalCredential",
+		name: cert.name,
+		credentialCategory: "certificate",
+		recognizedBy: { "@type": "Organization", name: cert.issuer },
+		url: cert.link,
+	})),
+};
+
+// Two graphs: who the page is about, and what he has shipped.
+const schema = {
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "ProfilePage",
+			"@id": canonical,
+			url: canonical,
+			name: `${data.me.name} | ${data.me.title}`,
+			description,
+			inLanguage: "en",
+			mainEntity: { "@id": `${data.me.url}/#person` },
+		},
+		person,
+		{
+			"@type": "ItemList",
+			name: `Projects by ${data.me.name}`,
+			itemListElement: data.projects
+				.filter((project) => project.link)
+				.map((project, index) => ({
+					"@type": "ListItem",
+					position: index + 1,
+					item: {
+						"@type": "CreativeWork",
+						name: project.title,
+						description: project.description,
+						url: project.link,
+						creator: { "@id": `${data.me.url}/#person` },
+						keywords: project.technologies?.join(", "),
+					},
+				})),
+		},
+	],
+};
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={data.me.about} />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+		<meta
+			name="robots"
+			content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+		/>
+		<meta name="author" content={data.me.legalName} />
+		<meta name="theme-color" content="#042E16" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/favicon.svg" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta name="generator" content={Astro.generator} />
+
+		<meta property="og:type" content="profile" />
+		<meta property="og:site_name" content={data.me.name} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:image" content={socialImage} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content={`${data.me.name}, ${data.me.title}`} />
+		<meta property="og:locale" content="en_US" />
+		<meta property="profile:first_name" content="Elian" />
+		<meta property="profile:last_name" content="Gerard" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={socialImage} />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=MuseoModerno:wght@600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
 			rel="stylesheet"
 		/>
-		<title>{title}</title>
+
+		<script
+			type="application/ld+json"
+			is:inline
+			set:html={JSON.stringify(schema)}
+		/>
 	</head>
 	<body class="relative w-full">
 		<Header />
