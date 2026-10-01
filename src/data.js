@@ -14,7 +14,7 @@ export const data = {
             linkedin: "https://www.linkedin.com/in/eliangerard/"
         },
         about:
-            "Frontend engineer with 2+ years building AutoZone's e-commerce storefronts (React, Next.js, TypeScript) for the US, Mexico and Brazil. One of 3 frontend engineers on Customer Reviews, which grew review submissions more than 5x. I also run two products of my own on Cloudflare Workers, built mostly with Claude Code."
+            "Frontend engineer with 2+ years building AutoZone's e-commerce storefronts for the US, Mexico and Brazil. Co-built Customer Reviews, which grew review submissions more than 5x. Also build and run 2 personal products on Cloudflare Workers."
     },
     experience: [
         {
@@ -24,13 +24,14 @@ export const data = {
             description:
                 "Progression: IT Intern (Jun 2024), Associate Systems Engineer (Aug 2024), Systems Engineer (Mar 2026).",
             highlights: [
-                "Built Customer Reviews as one of 3 frontend engineers and set its build order and integration plan. Launched in the US, then Mexico. Submissions grew more than 5x year over year.",
-                "Rebuilt the review form to make adding text, photos and videos easier. Review quality (written content, photos and videos) rose about 40%. Both figures come from AutoZone's business analytics team.",
-                "Started a legacy cleanup unprompted: rewrote post-sign-in redirects across 70+ files and began moving state management from Redux to TanStack Query (in progress).",
+                "Built Customer Reviews as one of 3 frontend engineers and set its build order and integration plan. Launched in the US, then Mexico; submissions grew more than 5x year over year.",
+                "Rebuilt the review form to make adding text, photos and videos easier; review quality rose about 40% (both figures from AutoZone's business analytics team).",
+                "Initiated a legacy cleanup: rewrote post-sign-in redirects across 70+ files and began moving state management from Redux to TanStack Query (in progress).",
                 "Received AutoZone's Extra Miler award (May 2026) for teamwork and the legacy cleanup.",
-                "Mentored an intern. Review pull requests and help interns and associate engineers on other teams.",
-                "Run A/B tests in Monetate and Forte, manage feature flags and translated labels in Oracle ATG BCC, and take part in releases, production fixes and troubleshooting calls with third-party vendors.",
-                "Ship features from Figma designs that are responsive, ADA-compliant and covered by Jest and React Testing Library tests, working with Product and Design in a Scrum team and in annual planning."
+                "Mentored an intern; review pull requests and help interns and associate engineers on other teams.",
+                "Run A/B tests in Monetate and Forte; manage feature flags and translated labels in Oracle ATG BCC; join releases, production fixes and vendor troubleshooting calls.",
+                "Ship responsive, ADA-compliant features from Figma designs, tested with Jest and React Testing Library.",
+                "Work with Product and Design in a Scrum team and in annual planning."
             ],
             link: "https://autozone.com/"
         },
@@ -39,7 +40,7 @@ export const data = {
             subtitle: "Personal Products (Orablo, Vinqua)",
             date: "July 2026 - Present",
             description:
-                "Built mostly with Claude Code under my direction. I decide what to build and how, and ship it.",
+                "Built mostly with Claude Code; own the product, design and release decisions.",
             highlights: [
                 "Orablo (orablo.com) teaches pronunciation in 6 languages on web and Android (Capacitor), grading speech in the browser with the Web Speech API and an on-device Vosk fallback. Daily lessons are drafted with the Claude Agent SDK and gated by a separate LLM judge. Next.js 16 and Tailwind CSS on Cloudflare Workers (D1, KV, R2).",
                 "Vinqua (vinqua.com) builds a free VIN report from 8 NHTSA and EPA endpoints, streamed section by section with React Suspense. A two-layer cache lets different VINs share lookups."
@@ -50,7 +51,7 @@ export const data = {
             subtitle: "Freelance (TintoTenis, Por Amor a Tobby)",
             date: "December 2023 - April 2025",
             highlights: [
-                "Built full-stack apps for two clients: a platform a tennis academy uses for class management, payments and reporting, and an adoption platform for animal shelters (poramoratobby.com).",
+                "Built full-stack apps for 2 clients: a class management, payments and reporting platform for a tennis academy, and an adoption platform for animal shelters (poramoratobby.com).",
                 "Owned the database schema, REST API design and deployment (React, Express, MySQL)."
             ]
         },
