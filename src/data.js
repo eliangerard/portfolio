@@ -8,63 +8,58 @@ export const data = {
         location: "Chihuahua, Mexico",
         // Kept near 155 characters so search results show it whole.
         seoDescription:
-            "Frontend engineer building fast, accessible web apps with React and Next.js. Currently at AutoZone, and the maker of Vinqua, Orablo and Dahibi.",
+            "Frontend engineer building AutoZone's e-commerce storefronts with React and Next.js. Maker of Orablo and Vinqua, running on Cloudflare Workers.",
         profiles: {
             github: "https://github.com/eliangerard/",
             linkedin: "https://www.linkedin.com/in/eliangerard/"
         },
         about:
-            "Frontend Software Engineer specializing in high-performance, scalable web applications with React and Next.js. I build fast, accessible, and pixel-perfect user experiences that drive measurable business impact, with a strong focus on performance, usability, and clean architecture."
+            "Frontend engineer with 2+ years building AutoZone's e-commerce storefronts (React, Next.js, TypeScript) for the US, Mexico and Brazil. One of 3 frontend engineers on Customer Reviews, which grew review submissions more than 5x. I also run two products of my own on Cloudflare Workers, built mostly with Claude Code."
     },
     experience: [
         {
-            title: "Systems Engineer",
-            subtitle: "AutoZone BTSSC",
-            date: "March 2026 - Present",
+            title: "Systems Engineer (Frontend)",
+            subtitle: "AutoZone",
+            date: "June 2024 - Present",
+            description:
+                "Progression: IT Intern (Jun 2024), Associate Systems Engineer (Aug 2024), Systems Engineer (Mar 2026).",
             highlights: [
-                "Own and deliver high-performance UI features using React.js and Next.js for a large-scale e-commerce platform.",
-                "Led the Customer Reviews feature across multiple regions, driving a 5x+ increase in user-generated reviews (+400% YoY).",
-                "Improved review quality by ~40% through optimized submission flows in Order History.",
-                "Contributed to AutoZone’s React design system and led frontend refactors improving performance and maintainability.",
-                "Collaborate cross-functionally to ship high-impact features under tight deadlines."
+                "Built Customer Reviews as one of 3 frontend engineers and set its build order and integration plan. Launched in the US, then Mexico. Submissions grew more than 5x year over year.",
+                "Rebuilt the review form to make adding text, photos and videos easier. Review quality (written content, photos and videos) rose about 40%. Both figures come from AutoZone's business analytics team.",
+                "Started a legacy cleanup unprompted: rewrote post-sign-in redirects across 70+ files and began moving state management from Redux to TanStack Query (in progress).",
+                "Received AutoZone's Extra Miler award (May 2026) for teamwork and the legacy cleanup.",
+                "Mentored an intern. Review pull requests and help interns and associate engineers on other teams.",
+                "Run A/B tests in Monetate and Forte, manage feature flags and translated labels in Oracle ATG BCC, and take part in releases, production fixes and troubleshooting calls with third-party vendors.",
+                "Ship features from Figma designs that are responsive, ADA-compliant and covered by Jest and React Testing Library tests, working with Product and Design in a Scrum team and in annual planning."
             ],
             link: "https://autozone.com/"
         },
         {
-            title: "Associate Systems Engineer",
-            subtitle: "AutoZone BTSSC",
-            date: "August 2024 - March 2026",
+            title: "Independent Developer",
+            subtitle: "Personal Products (Orablo, Vinqua)",
+            date: "July 2026 - Present",
+            description:
+                "Built mostly with Claude Code under my direction. I decide what to build and how, and ship it.",
             highlights: [
-                "Built and shipped production-grade UI features with React.js and Next.js for millions of users.",
-                "Redesigned Order History and Order Details pages end-to-end, improving usability and consistency.",
-                "Launched the Customer Reviews feature in the US, driving a 5x increase in user-generated reviews.",
-                "Focused on performance optimization, reducing layout shift and improving user experience.",
-                "Partnered with Product, QA, and Design to deliver high-priority features on schedule."
-            ],
-            link: "https://autozone.com/"
+                "Orablo (orablo.com) teaches pronunciation in 6 languages on web and Android (Capacitor), grading speech in the browser with the Web Speech API and an on-device Vosk fallback. Daily lessons are drafted with the Claude Agent SDK and gated by a separate LLM judge. Next.js 16 and Tailwind CSS on Cloudflare Workers (D1, KV, R2).",
+                "Vinqua (vinqua.com) builds a free VIN report from 8 NHTSA and EPA endpoints, streamed section by section with React Suspense. A two-layer cache lets different VINs share lookups."
+            ]
         },
         {
-            title: "Fullstack Developer",
-            subtitle: "TintoTenis",
+            title: "Full-Stack Developer",
+            subtitle: "Freelance (TintoTenis, Por Amor a Tobby)",
             date: "December 2023 - April 2025",
             highlights: [
-                "Architected and built a full-stack web app using React, Tailwind, Express, and MySQL.",
-                "Designed database schema, REST APIs, and backend infrastructure from scratch.",
-                "Managed deployment, server configuration, and domain setup end-to-end.",
-                "Collaborated closely with design to deliver a polished and intuitive user experience.",
-                "Digitized core business operations, improving efficiency and data visibility."
+                "Built full-stack apps for two clients: a platform a tennis academy uses for class management, payments and reporting, and an adoption platform for animal shelters (poramoratobby.com).",
+                "Owned the database schema, REST API design and deployment (React, Express, MySQL)."
             ]
         },
         {
             title: "Programming Tutor",
-            subtitle: "SuperProf",
+            subtitle: "Superprof",
             date: "October 2023 - June 2025",
             highlights: [
-                "Provide 1-on-1 coaching in web development (HTML, CSS, React, Node.js).",
-                "Debug complex student projects in real time, strengthening problem-solving skills.",
-                "Mentor students toward job-ready development skills and best practices.",
-                "Built a strong base of returning students through high-quality instruction.",
-                "Helped multiple students successfully transition into web development."
+                "Coached students 1-on-1 in web development (HTML, CSS, React, Node.js), debugging their projects with them in real time."
             ],
             link: "https://www.superprof.mx/estudiante-ingenieria-ofrece-clases-programacion-html-css-node-react.html"
         }
@@ -84,6 +79,12 @@ export const data = {
         }
     ],
     certifications: [
+        {
+            name: "Professional Cloud Architect",
+            issuer: "Google Cloud",
+            icon: "/tech-stack/gcp.svg",
+            link: "https://www.credly.com/badges/d4a5f875-e681-4eac-b627-e3bfb4804342"
+        },
         {
             name: "Associate Cloud Engineer",
             issuer: "Google Cloud",
@@ -134,7 +135,7 @@ export const data = {
         {
             title: "Orablo",
             description:
-                "Daily English pronunciation practice. Every day is a new edition of ten words and the sentences they live in, graded in the browser by speech recognition.",
+                "Daily pronunciation practice in 6 languages. Every day is a new edition of ten words and the sentences they live in, graded in the browser by speech recognition.",
             technologies: ["Next.js", "React", "TypeScript", "Tailwind", "Cloudflare Workers"],
             image: "/orablo.webp",
             link: "https://orablo.com/"
