@@ -125,14 +125,6 @@ export const data = {
     ],
     projects: [
         {
-            title: "Vinqua",
-            description:
-                "Free VIN check that pulls every public U.S. government record on a vehicle into one report: full specification decode, open safety recalls, the parts owners most often report failing, crash-test ratings and real-world fuel economy. No account and no card.",
-            technologies: ["Next.js", "React", "TypeScript", "Tailwind", "Cloudflare Workers"],
-            image: "/vinqua.webp",
-            link: "https://vinqua.com/"
-        },
-        {
             title: "Orablo",
             description:
                 "Daily pronunciation practice in 6 languages. Every day is a new edition of ten words and the sentences they live in, graded in the browser by speech recognition.",
@@ -141,12 +133,12 @@ export const data = {
             link: "https://orablo.com/"
         },
         {
-            title: "Dahibi",
+            title: "Vinqua",
             description:
-                "One moodboard per day for anything that runs on days. Each day is an infinite canvas for photos, notes and colour swatches, and it is local-first, so everything stays in the browser.",
-            technologies: ["Next.js", "React", "TypeScript", "Tailwind", "IndexedDB"],
-            image: "/dahibi.webp",
-            link: "https://dahibi.com/"
+                "Free VIN check that pulls every public U.S. government record on a vehicle into one report: full specification decode, open safety recalls, the parts owners most often report failing, crash-test ratings and real-world fuel economy. No account and no card.",
+            technologies: ["Next.js", "React", "TypeScript", "Tailwind", "Cloudflare Workers"],
+            image: "/vinqua.webp",
+            link: "https://vinqua.com/"
         },
         {
             title: "Por Amor a Tobby",
