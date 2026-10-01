@@ -51,7 +51,7 @@ export const data = {
             subtitle: "Freelance (TintoTenis, Por Amor a Tobby)",
             date: "December 2023 - April 2025",
             highlights: [
-                "Built full-stack apps for 2 clients: a class management, payments and reporting platform for a tennis academy, and an adoption platform for animal shelters (poramoratobby.com).",
+                "Built full-stack apps for 2 clients: an order management platform for a multi-branch sneaker cleaning business (tickets, deposits, deliveries, reports and WhatsApp notifications), and an adoption platform for animal shelters (poramoratobby.com).",
                 "Owned the database schema, REST API design and deployment (React, Express, MySQL)."
             ]
         },
@@ -152,7 +152,7 @@ export const data = {
         {
             title: "TintoTenis",
             description:
-                "End-to-end platform for a tennis academy covering class management, payments, and reporting through a custom dashboard.",
+                "Order management platform for a sneaker cleaning business with several branches: service tickets, deposits, deliveries and reports, with WhatsApp notifications to customers.",
             technologies: ["React", "Node.js", "MySQL", "Express", "Tailwind"],
             image: "/tt.webp"
         },
